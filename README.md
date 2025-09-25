@@ -50,8 +50,8 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone https://github.com/GKGabriel04/Cadastro-e-Login-em-Java.git
+    cd Cadastro-e-Login-em-Java
     ```
 
 2.  **Crie o arquivo de configuração local:**
