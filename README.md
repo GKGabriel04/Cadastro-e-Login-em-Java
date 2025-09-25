@@ -61,11 +61,13 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
     spring:
       data:
         mongodb:
-          uri: mongodb+srv://<SEU_USUARIO_DO_ATLAS>:<SUA_SENHA_DO_ATLAS>@<SEU_CLUSTER>.mongodb.net/<NOME_DO_BANCO>?retryWrites=true&w=majority
+          host: localhost
+          port: 27017
+          database: Login_seguro
     
     app:
       encryption:
-        key: <SUA_CHAVE_SECRETA_DE_16_CARACTERES> # Chave para criptografar o CPF
+        key: k9pXvR7sL3bA2mHq
     ```
 
 3.  **Execute a aplicação:**
