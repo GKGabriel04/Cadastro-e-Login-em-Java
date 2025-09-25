@@ -1,6 +1,6 @@
 # 🚀 Sistema de Login Seguro com Spring Boot
 
-Este projeto é um sistema de login seguro desenvolvido como parte de uma atividade acadêmica, demonstrando conceitos avançados de autenticação, autorização, segurança de dados e conformidade com a LGPD. O sistema foi construído de forma modular para servir como uma base robusta para futuros projetos.
+Este projeto é um sistema de cadastro e login desenvolvido como parte de uma atividade acadêmica, demonstrando conceitos avançados de autenticação, autorização, segurança de dados e conformidade com a LGPD. O sistema foi construído de forma modular para servir como uma base robusta para futuros projetos.
 
 **Status do Projeto:** Concluído ✔️
 
