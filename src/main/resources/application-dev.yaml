@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: Login_seguro
+
+app:
+  encryption:
+    key: k9pXvR7sL3bA2mHq

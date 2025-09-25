@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Bem-vindo(a), <span sec:authentication="principal.nome">Usuário</span>!</h1>
+
+    <p>Você está logado no sistema.</p>
+
+    <div sec:authorize="hasRole('ADMIN')">
+        <h2>Painel do Administrador</h2>
+        <p>Este conteúdo só pode ser visto por administradores.</p>
+        <a th:href="@{/admin/usuarios}">Gerenciar Usuários</a>
+    </div>
+
+    <div sec:authorize="hasRole('USER')">
+        <h2>Painel do Usuário</h2>
+        <p>Este é um conteúdo para usuários comuns.</p>
+    </div>
+
+    <form th:action="@{/logout}" method="post" style="margin-top: 20px;">
+        <button type="submit">Sair</button>
+    </form>
+</div>
+</body>
+</html>

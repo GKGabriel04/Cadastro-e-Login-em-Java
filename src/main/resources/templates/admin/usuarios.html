@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .container { width: 95%; max-width: 1200px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        thead { background-color: #f2f2f2; }
+        .delete-button { background-color: #d9534f; border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+        .delete-button:hover { background-color: #c9302c; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Gerenciamento de Usuários</h1>
+    <p>Lista de todos os usuários cadastrados no sistema.</p>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Documento (Mascarado)</th>
+            <th>Rua (Mascarada)</th>
+            <th>Número (Mascarado)</th>
+            <th>Bairro</th>
+            <th>CEP</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.nome}">Nome do Usuário</td>
+            <td th:text="${usuario.email}">email@exemplo.com</td>
+            <td th:text="${usuario.documentoMascarado}">12********12</td>
+            <td th:text="${usuario.endereco.ruaMascarada}">R********a</td>
+            <td th:text="${usuario.endereco.numeroMascarado}">1**</td>
+            <td th:text="${usuario.endereco.bairro}">Bairro Exemplo</td>
+            <td th:text="${usuario.endereco.cep}">12345-678</td>
+            <td>
+                <form th:action="@{/admin/usuarios/deletar/{id}(id=${usuario.id})}" method="post" onsubmit="return confirm('Tem certeza que deseja apagar este usuário?');">
+                    <button type="submit" class="delete-button">Apagar</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/home}" style="margin-top: 20px; display: inline-block;">Voltar para a Home</a>
+</div>
+</body>
+</html>
