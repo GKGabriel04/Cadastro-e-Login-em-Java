@@ -79,7 +79,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
 
 - A aplicação estará disponível em `http://localhost:8080`.
 - **Usuário Admin Padrão (criado na primeira execução):**
-  - **Login:** `admin@seudominio.com`
-  - **Senha:** `admin123` *(Recomendado alterar no código para um ambiente mais seguro)*
+  - **Login:** `admin@gmail.com`
+  - **Senha:** `testedeadmin` *(Recomendado alterar no código para um ambiente mais seguro)*
 
 ---
