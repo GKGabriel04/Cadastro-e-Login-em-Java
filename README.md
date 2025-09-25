@@ -83,8 +83,3 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
   - **Senha:** `admin123` *(Recomendado alterar no código para um ambiente mais seguro)*
 
 ---
-
-## 📄 Documentação da Atividade
-
-*(Esta seção é opcional, mas recomendada)*
-Aqui você pode adicionar um link para um Google Docs ou um PDF com a documentação mais detalhada solicitada na atividade, explicando a estrutura do sistema, as decisões de design, etc.
